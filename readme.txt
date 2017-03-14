@@ -3,4 +3,9 @@ git add file： 将file从工作区添加到暂存区
 git commit -m "descript": 将暂存区中所有的文件提交到版本库
 git status：显示当前仓库的状态，如果没提交到暂存区，则文件显示为红色，如果文件提交到暂缓区，未提交到版本库，则文件为绿色
 git diff file： 显示file在工作区和暂存区的区别
-test
+git diff --cached file : 显示file在暂存区和版本区的区别
+git diff HEAD: 显示file工作区和版本区的区别
+git log： 显示从最近到最远的提交的记录，主要用于确定回退到哪个版本
+git reflog： 显示命令历史，以便确定要回到未来哪个版本
+git reset --hard 版本号：回头到某一个版本号
+git checkout --file： 丢弃工作区的修改
