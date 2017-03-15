@@ -13,3 +13,19 @@ git rm file ：删除file
 git checkout -- file: 如果误删了file，并且提交了，可以使用此把误删的文件恢复到版本库最新版本
 
 git remote add origin git@github.com:michaelliao/learngit.git： 关联本地库到远程库
+git push -u origin master ： 第一次推送master分支的所有内容
+git push origin master：此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
+git clone git@github.com:huangyugui/learngit.git: 克隆一个仓库
+
+git branch :查看分支
+git branch <name>: 创建分支
+git checkout <name>: 切换分支
+git checkout -b <name>: 创建并切换分支
+git merge <name>： 合并某分支到当前分支
+git branch -d <name>: 删除分支
+
+
+
+
+
+
