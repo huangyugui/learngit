@@ -27,6 +27,6 @@ git log --graph --pretty=oneline --abbrev-commit：可以看到分支合并的�
 git merge --no-ff -m "merge with no-ff" dev： 不使用fast-forward模式进行merge
 
 
-
+啊啊啊啊啊啊啊啊啊啊
 
 
