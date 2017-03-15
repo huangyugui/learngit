@@ -25,6 +25,8 @@ git merge <name>： 合并某分支到当前分支
 git branch -d <name>: 删除分支
 
 master test conflict
+test
+
 
 
 
