@@ -31,3 +31,46 @@ git stash list：显示存储的工作现场
 git stash apply <stash> : 恢复当前的工作现场
 git stash drop <stash>: 删除工作现场
 git stash pop： 恢复工作现场，并删除工作现场
+
+
+修改bug的流程：
+1： $ git stash
+
+2： $ git checkout master
+   $ git checkout -b issue-101
+    //去文件里修bug
+    $ git add README.md
+    $ git commit -m "fix-issue-101"
+
+3： $ git checkout master
+   $ git merge --no-ff -m "m-merge-issue-101" issue-101
+   $ git branch -d issue-101
+
+4： $ git checkout dev
+    $ git merge --no-ff -m "dev-merge-m" master
+
+5： $ git stash pop
+            //提示冲突，去文件手动改正
+            Auto-merging README.md
+            CONFLICT (content): Merge conflict in README.md
+
+6： //继续开发 ... ... ，完成后一并提交
+    $ git add README.md
+    $ git commit -m "fixconflict & append something"
+
+7： $ git checkout master
+    $ git merge --no-ff -m "m-merge-dev" dev
+    $ git branch -d dev
+	
+
+	
+git remote： 查看远程库的信息
+查看远程库信息，使用git remote -v；
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+（如果上面一步报错：fatal: Cannot update paths and switch to branch 'dev' at the same time.
+Did you intend to checkout 'origin/dev' which can not be resolved as commit?
+则可以git remote show origin   、   git remote update，然后在执行上面的操作）
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
