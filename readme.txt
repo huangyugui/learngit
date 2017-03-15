@@ -11,3 +11,5 @@ git reset --hard 版本号：回头到某一个版本号
 git checkout --file： 丢弃工作区的修改
 git rm file ：删除file
 git checkout -- file: 如果误删了file，并且提交了，可以使用此把误删的文件恢复到版本库最新版本
+
+git remote add origin git@github.com:michaelliao/learngit.git： 关联本地库到远程库
