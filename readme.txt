@@ -26,7 +26,8 @@ git branch -d <name>: 删除分支
 git log --graph --pretty=oneline --abbrev-commit：可以看到分支合并的情况
 git merge --no-ff -m "merge with no-ff" dev： 不使用fast-forward模式进行merge
 
-
-啊啊啊啊啊啊啊啊啊啊
-
-
+git stash: 将当前工作现场存储起来，如果多次，则会覆盖前一次的
+git stash list：显示存储的工作现场
+git stash apply <stash> : 恢复当前的工作现场
+git stash drop <stash>: 删除工作现场
+git stash pop： 恢复工作现场，并删除工作现场
