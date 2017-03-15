@@ -73,7 +73,7 @@ git remote： 查看远程库的信息
 如果合并有冲突，则解决冲突，并在本地提交；
 没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
 如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name
-
+如果提示 --set-upstream已被弃用并将被移除则使用：git branch --set-upstream-to=origin/dev dev
 
 
 
@@ -83,3 +83,12 @@ git remote： 查看远程库的信息
 Did you intend to checkout 'origin/dev' which can not be resolved as commit?
 则可以git remote show origin   、   git remote update，然后在执行上面的操作）
 
+
+git tag <name>： 新建一个标签
+git tag： 列出所有的标签
+git tag -a <标签名> -m <文字说明> <commit id> 
+git push origin <tagname>：可以推送一个本地标签；
+git push origin --tags：可以推送全部未推送过的本地标签；
+git tag -d <tagname>：可以删除一个本地标签；
+git push origin :refs/tags/<tagname>：可以删除一个远程标签。
+git push origin --delete tag <tagname>:可以删除一个远程标签
