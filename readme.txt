@@ -23,9 +23,8 @@ git checkout <name>: 切换分支
 git checkout -b <name>: 创建并切换分支
 git merge <name>： 合并某分支到当前分支
 git branch -d <name>: 删除分支
-
-master test conflict
-test
+git log --graph --pretty=oneline --abbrev-commit：可以看到分支合并的情况
+git merge --no-ff -m "merge with no-ff" dev： 不使用fast-forward模式进行merge
 
 
 
