@@ -10,3 +10,5 @@ git reflog： 显示命令历史，以便确定要回到未来哪个版本
 git reset --hard 版本号：回头到某一个版本号
 git checkout --file： 丢弃工作区的修改
 git reset HEAD file：将暂存区里面file的内容丢弃掉（相当于工作区做了修改，但是还未提交到暂存区）
+aaaaaa
+bbbbb
